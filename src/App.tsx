@@ -1,20 +1,16 @@
 import styles from "./App.module.scss"
-import {useCallback} from "react";
+import {FC} from "react";
+import {Form} from "./components/Form/Form.tsx";
+import {Links} from "./components/Links/Links.tsx";
 
-function App() {
-
-  const handleSubmit = useCallback((e) => {
-    e.preventDefault();
-  }, [])
-
+export const App: FC = () => {
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <input className={styles.input} placeholder="Add filter url"/>
-        <button onClick={handleSubmit} type="button" className={styles.btn}>Add link</button>
-      </form>
+      <div className={styles.containerInner}>
+        <Form/>
+        <Links/>
+      </div>
     </div>
   )
-}
+};
 
-export default App
