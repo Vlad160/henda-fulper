@@ -1,32 +1,19 @@
 {
-  "name": "funda-helper",
-  "private": true,
+  "name": "hunda-pelper",
   "version": "0.0.0",
-  "type": "module",
+  "description": "Server & client root",
+  "private": true,
+  "license": "UNLICENSED",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "start:dev:client": "npm run --prefix=client dev",
+    "start:dev:server": "npm run --prefix=server dev"
   },
-  "dependencies": {
-    "mobx": "^6.13.7",
-    "mobx-react-lite": "^4.1.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vlad160/henda-fulper.git"
   },
-  "devDependencies": {
-    "@eslint/js": "^9.21.0",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.21.0",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^15.15.0",
-    "sass-embedded": "^1.86.3",
-    "typescript": "~5.7.2",
-    "typescript-eslint": "^8.24.1",
-    "vite": "^6.2.0"
-  }
+  "workspaces": [
+    "client",
+    "server"
+  ]
 }

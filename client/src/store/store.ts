@@ -1,4 +1,4 @@
-import {makeObservable, observable} from "mobx";
+import {action, makeObservable, observable} from "mobx";
 
 export interface Link {
   id: string;
@@ -25,11 +25,12 @@ export class Store {
   constructor() {
     makeObservable(this, {
       links: observable.shallow,
+      addLink: action,
     });
   }
 
-  addLink(link: Link) {
-    this.links.push(link);
+  addLink(link: string) {
+    this.links.push({id: crypto.randomUUID(), src: link});
   }
 
 }

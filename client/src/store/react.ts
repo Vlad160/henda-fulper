@@ -1,4 +1,4 @@
-import {createContext, useContext} from "react";
+import {createContext, useContext} from "client/src/store/react";
 import {Store} from "./store.ts";
 
 export const StoreContext = createContext<Store | null>(null);

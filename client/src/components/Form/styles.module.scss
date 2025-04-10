@@ -7,6 +7,7 @@
   font-weight: 600;
   border: none;
   outline: none;
+  max-width: 10rem;
 
   &:hover {
     background-color: #515962;
@@ -17,13 +18,27 @@
   border: 1px solid #f3f3f4;
   border-radius: 0.5rem;
   padding: 1rem;
-  flex-grow: 1;
 }
 
 .form {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
   width: 100%;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.error {
+  color: #e60c0c;
+  font-size: 1rem;
+  line-height: 1;
+  height: 1rem;
+  margin-top: 0.5rem;
 }
